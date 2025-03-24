@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Реєстрація</title>
+  <link rel="stylesheet" href="main.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+</head>
+<body>
+<header>
+  <h1>Зареєструватися</h1>
+</header>
+<nav>
+  <a href="index.html">Головне меню</a>
+  <a href="vacancies.html"><i class="fas fa-briefcase"></i> Вакансії</a>
+  <a href="profile.html"><i class="fas fa-user"></i> Мій профіль</a>
+  <a href="search.html"><i class="fas fa-search"></i> Пошук роботи</a>
+</nav>
+<main class="container">
+  <section class="auth-form">
+    <h2>Вхід або реєстрація</h2>
+    <form id="auth-form">
+      <div class="input-type">
+        <label>
+          <input type="radio" name="auth-type" id="use-email" checked onchange="toggleField()"> Електронна пошта
+        </label>
+        <label>
+          <input type="radio" name="auth-type" id="use-phone" onchange="toggleField()"> Номер телефону
+        </label>
+      </div>
+
+      <label for="user-email">Електронна пошта:</label>
+      <input type="email" id="user-email" placeholder="Введіть вашу електронну пошту" required>
+
+      <label for="user-phone" style="display:none;">Номер телефону:</label>
+      <input type="tel" id="user-phone" placeholder="Введіть ваш номер телефону" style="display:none;" required>
+
+      <label for="user-password">Пароль:</label>
+      <input type="password" id="user-password" placeholder="Введіть ваш пароль" required>
+
+      <button type="submit" class="submit-btn">Зареєструватись</button>
+    </form>
+
+    <p>Вже зареєстровані? <a href="login.html">Зайдіть на свій обліковий запис</a></p>
+  </section>
+</main>
+<footer>
+  <p>Контакти: vovafifa10@gmail.com | 050-990-10-76</p>
+</footer>
+</body>
+</html>
+

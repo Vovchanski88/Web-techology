@@ -1,0 +1,578 @@
+/* Загальні стилі */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: "Times New Roman", sans-serif;
+    color: #333;
+    background: url('background.png') no-repeat center center fixed;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+}
+
+/* Основний контент */
+.container {
+    flex: 1;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.container-search {
+    margin: 20px;
+}
+
+/* Форма пошуку */
+.search-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Групи полів */
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Лейбли */
+.form-group label {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+/* Іконки */
+.form-group label i {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #555;
+}
+
+/* Поля вводу */
+select, input[type="number"] {
+    width: 250px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+/* Кнопка пошуку */
+button {
+    background-color: #28a745;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+button i {
+    margin-right: 8px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1px 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.job-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.job-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-card-history {
+    width: 100%;
+    max-width: 600px; /* Обмежує максимальну ширину картки */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.job-card img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.job-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.applied-tag {
+    background: #28a745;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.meta {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.meta a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.meta a:hover {
+    text-decoration: underline;
+}
+
+/* Навігація */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #444;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 10px 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+/* Популярні компанії */
+.company-grid {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.company-grid img {
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.company-grid img:hover {
+    transform: scale(1.1);
+}
+
+/* Блоки статей та новин */
+.articles-grid, .news-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.article-card, .news-card {
+    width: 48%;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.article-card:hover, .news-card:hover {
+    transform: scale(1.02);
+}
+
+.article-card img, .news-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.article-card h3, .news-card h3 {
+    font-size: 18px;
+    color: #0073e6;
+    margin: 10px;
+}
+
+.article-image {
+    width: 80%; /* Регулюйте ширину на 80% від контейнера */
+    max-width: 800px; /* Максимальна ширина 800px */
+    height: auto; /* Зберігаємо пропорції */
+}
+
+.article-card p, .news-card p {
+    color: #555;
+    margin: 0 10px 10px;
+}
+
+/* Кнопка фільтру */
+.filter-icon {
+    cursor: pointer;
+    background-color: #444;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    font-size: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.filter-icon:hover {
+    background-color: #555;
+}
+
+.filter-container {
+    display: none;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+.filter-option {
+    margin-bottom: 15px;
+}
+
+.filter-option label {
+    font-weight: bold;
+}
+
+.filter-container input,
+.filter-container select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Показ фільтрів при натисканні */
+.filter-container.show {
+    display: flex;
+}
+/* Стилі для сторінки входу */
+.auth-form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.auth-form h2 {
+    text-align: center;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+.auth-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.auth-form button:hover {
+    background-color: #45a049;
+}
+
+.login-btn {
+    background-color: #808080;  /* сірий фон */
+    color: white;  /* білий текст */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;  /* плавний перехід фону */
+    text-decoration: none;  /* знімає підкреслення з посилання */
+    display: inline-block;
+    text-align: center;
+}
+
+.login-btn:hover {
+    background-color: #555555;  /* темніший сірий при наведенні */
+}
+.tabs {
+    display: flex;
+    flex-wrap: wrap;  /* Дозволяє елементам переноситись на наступний рядок */
+    justify-content: space-around;
+    height: 75vh;
+    align-items: center;
+}
+
+.tabs a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    text-decoration: none;
+    color: black;
+    font-size: 35px;
+    height: 45%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
+}
+
+.tabs a:hover {
+    background-color: #c0c0c0; /* Світліший сірий фон при наведенні */
+}
+
+.resume-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.create-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.history-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрує картки */
+    gap: 15px;
+    padding: 20px;
+}
+
+.create-btn {
+    background: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.create-btn:hover {
+    background: #0056b3;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown-content a:hover {
+    background: #f0f0f0;
+}
+
+.create-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.resume-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.resume-card {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resume-header h2 {
+    margin: 0;
+}
+
+.tag {
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    color: white;
+}
+
+.standard { background: #007bff; }
+.professional { background: #ff7f50; }
+.vip { background: #28a745; }
+
+.meta {
+    font-size: 14px;
+    color: #666;
+}
+
+.resume-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.views {
+    color: #333;
+    font-weight: bold;
+}
+
+.highlight {
+    color: #d9534f;
+    font-weight: bold;
+}
+
+.new {
+    background: #d9534f;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 50%;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.update-btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.update-btn:hover {
+    background: #0056b3;
+}
+
+.profile-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-info {
+    flex: 1;
+    text-align: left;
+}
+
+.profile-info p {
+    font-size: 16px;
+    color: #444;
+    margin: 5px 0;
+}
+
+/* Права частина: фото */
+.profile-photo-container {
+    flex-shrink: 0;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #555;
+}
+
+/* Соц. мережі */
+.social-links {
+    list-style: none;
+    padding: 0;
+}
+
+.social-links li {
+    margin: 10px 0;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+.social-links i {
+    margin-right: 8px;
+    font-size: 22px;
+}
+
+.company-logo {
+    width: 150px; /* або будь-який інший розмір */
+    height: auto;
+}
+
+
+/* Футер */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+    width: 100%;
+}

@@ -4,28 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Мій профіль</title>
-  <link rel="stylesheet" href="styles.css">
-
+  <link rel="stylesheet" href="main.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
 </head>
 <body>
 <header>
-  <h1>Мій профіль</h1>
+  <h1>Ласкаво просимо, Користувач</h1>
 </header>
 <nav>
   <a href="index.html">Головне меню</a>
-  <a href="vacancies.html">Вакансії</a>
-  <a href="search.html">Пошук роботи</a>
+  <a href="vacancies.html"><i class="fas fa-briefcase"></i> Вакансії</a>
+  <a href="search.html"><i class="fas fa-search"></i> Пошук роботи</a>
 </nav>
 <main class="container">
   <section>
-    <p><strong>Ім'я:</strong> Володимир Чігур</p>
-    <p><strong>Досвід роботи:</strong> 2 роки в програмуванні</p>
-    <p><strong>Навички:</strong> Python, Java</p>
-    <p><strong>Резюме:</strong> Розробник програмного забезпечення.</p>
+    <div class="tabs">
+      <a href="resume.html">
+        <i class="fas fa-file-alt"></i>
+        <span>Резюме</span>
+      </a>
+      <a href="history.html">
+        <i class="fas fa-history"></i>
+        <span>Історія вакансій</span>
+      </a>
+      <a href="personal.html">
+        <i class="fas fa-user"></i>
+        <span>Особисті дані</span>
+      </a>
+      <a href="index.html">
+        <i class="fas fa-sign-out-alt"></i>
+        <span>Вийти</span>
+      </a>
+    </div>
+
   </section>
 </main>
 <footer>
-  <p>Контакти: vovafifa10@gmail.com | +380 50 990 1076</p>
+  <p>Контакти: vovafifa10@gmail.com | 050-990-10-76</p>
 </footer>
 </body>
 </html>
