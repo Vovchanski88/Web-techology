@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Платформа з пошуку роботи</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="vacancies.html"><i class="fas fa-briefcase"></i> Вакансії</a>
+        <a href="profile.html"><i class="fas fa-user"></i> Мій профіль</a>
+        <a href="search.html"><i class="fas fa-search"></i> Пошук роботи</a>
+        <button class="login-btn"><a href="login.html">Увійти</a></button>
+    </nav>
+</header>
+
+<main class="container">
+    <h1>Втомився від пошуку роботи?</h1>
+    <h2>Ласкаво просимо на платформу для пошуку робочих вакансій!</h2>
+    <p>Зараз у нас <span id="job-count">0</span> актуальних вакансій.</p>
+
+    <section class="companies">
+        <h2>Популярні компанії</h2>
+        <div class="company-grid">
+            <a href="vacancies.html?company=SoftServe"><img src="https://info.softserveinc.com/hubfs/logo/softserve-logo-big.png" alt="Softserve"></a>
+            <a href="vacancies.html?company=Luxoft"><img src="https://upload.wikimedia.org/wikipedia/commons/3/36/LUXOFT_DXC_logo.svg" alt="Luxoft"></a>
+            <a href="vacancies.html?company=Miratech"><img src="https://chamber.ua/wp-content/uploads/2020/01/miratech.png" alt="Miratech"></a>
+            <a href="vacancies.html?company=DataArt"><img src="https://mostlovedworkplace.com/wp-content/uploads/2023/02/2_DataArt%20-%20Logo.png" alt="DataArt"></a>
+            <a href="vacancies.html?company=Intellias"><img src="https://d17ocfn2f5o4rl.cloudfront.net/wp-content/uploads/2024/03/Momentum-release_SM-1.png" alt="Intellias"></a>
+        </div>
+    </section>
+
+    <!-- Розділ статей -->
+    <section class="articles-section">
+        <h2>Статті</h2>
+        <div class="articles-grid">
+            <article class="article-card">
+                <a href="article1.html">
+                    <img src="https://i.work.ua/cdn-cgi/image/w=1000,dpr=1,f=webp/article/3526b.png?v=1740987023" alt="Стаття 1">
+                    <h3>Камера, мікрофон, освітлення: найпоширеніші помилки</h3>
+                    <p>Переконайтеся, що ви не припускаєтеся цих поширених помилок під час онлайн-співбесід.</p>
+                </a>
+            </article>
+            <article class="article-card">
+                <a href="article2.html">
+                    <img src="https://i.work.ua/cdn-cgi/image/w=1000,dpr=1,f=webp/article/3547b.png?v=1741599230" alt="Стаття 2">
+                    <h3>Ринок праці відновився на 93%</h3>
+                    <p>Ринок праці демонструє неймовірну стійкість у важкі часи.</p>
+                </a>
+            </article>
+        </div>
+    </section>
+
+    <!-- Розділ новин -->
+    <section class="news-section">
+        <h2>Новини</h2>
+        <div class="news-grid">
+            <article class="news-card">
+                <a href="https://www.work.ua/news/ukraine/3010/" target="_blank">
+                    <img src="https://i.work.ua/img/00009145_s.png" alt="Відновлення ринку праці в Україні">
+                    <h3>Понад 5 млн доларів на рік: як компанії втрачають гроші через перевтому працівників</h3>
+                    <p>Вигорання працівників часто сприймається як модний термін у корпоративному середовищі. Але його вплив на бізнес значно серйозніший, ніж здається.</p>
+                </a>
+            </article>
+            <article class="news-card">
+                <a href="https://prozahid.com/top-10-vakansij-vid-zakarpatskoi-oblasnoi-sluzhby-zajniatosti-11/?utm_source=chatgpt.com" target="_blank">
+                    <img src="https://prozahid.com/wp-content/smush-webp/2025/02/img_3881-1.png.webp" alt="ТОП 10 вакансій">
+                    <h3>ТОП 10 вакансій від Закарпатської обласної служби зайнятості</h3>
+                    <p>Серед актуальних вакансій на сьогодні найбільш затребуваними є:...</p>
+                </a>
+            </article>
+        </div>
+    </section>
+
+</main>
+
+<script src="vacancies.js"></script> <!-- Підключення JavaScript -->
+
+<footer>
+    <p>Контакти: vovafifa10@gmail.com | 050-990-10-76</p>
+</footer>
+</body>
+</html>

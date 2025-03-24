@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Резюме</title>
+  <link rel="stylesheet" href="main.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+</head>
+<body>
+<header>
+  <h1>Резюме</h1>
+</header>
+<nav>
+  <a href="profile.html">Назад до профілю</a>
+  <a href="vacancies.html"><i class="fas fa-briefcase"></i> Вакансії</a>
+
+</nav>
+
+<main>
+  <div class="resume-header-container">
+    <h1>Мої резюме</h1>
+    <div class="create-dropdown">
+      <button class="create-btn">Створити +</button>
+      <div class="dropdown-content">
+        <a href="#" id="newResumeBtn">Нове резюме</a>
+        <a href="#" id="uploadResumeBtn">Резюме з файлу</a>
+      </div>
+    </div>
+  </div>
+  <div class="resume-container" id="resumeContainer">
+    <!-- Тут будуть відображатися створені резюме -->
+  </div>
+</main>
+
+<!-- Модальне вікно для нового резюме -->
+<div id="newResumeModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2>Створити нове резюме</h2>
+    <form id="newResumeForm">
+      <label for="profession">Професія:</label>
+      <select id="profession" name="profession" required>
+        <option value="developer">Розробник</option>
+        <option value="designer">Дизайнер</option>
+        <option value="manager">Менеджер</option>
+        <option value="marketing">Маркетинг</option>
+        <option value="sales">Продажі</option>
+        <option value="support">Підтримка</option>
+        <option value="finance">Фінанси</option>
+        <option value="hr">HR</option>
+      </select>
+
+      <label for="experience">Стаж (роки):</label>
+      <input type="number" id="experience" name="experience" required>
+
+      <label for="skills">Навички:</label>
+      <textarea id="skills" name="skills" required></textarea>
+
+      <button type="submit">Створити резюме</button>
+    </form>
+  </div>
+</div>
+
+<!-- Модальне вікно для завантаження резюме з файлу -->
+<div id="uploadResumeModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2>Завантажити резюме з файлу</h2>
+    <input type="file" id="resumeFile" name="resumeFile" accept=".pdf,.docx" required>
+    <button id="uploadFileBtn">Завантажити</button>
+  </div>
+</div>
+
+<footer>
+  <p>Контакти: vovafifa10@gmail.com | 050-990-10-76</p>
+</footer>
+
+<script src="resume.js"></script>
+</body>
+</html>

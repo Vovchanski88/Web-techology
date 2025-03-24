@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пошук роботи</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+</head>
+<body>
+<header>
+    <h1>Пошук роботи</h1>
+</header>
+<nav>
+    <a href="index.html">Головне меню</a>
+    <a href="vacancies.html"><i class="fas fa-briefcase"></i> Вакансії</a>
+    <a href="profile.html"><i class="fas fa-user"></i> Мій профіль</a>
+    <button class="login-btn"><a href="login.html">Увійти</a></button>
+</nav>
+
+<main class="container-search">
+    <form action="" method="get" class="search-form">
+        <!-- Категорія -->
+        <div class="form-group">
+            <label for="category">
+                <i class="fas fa-briefcase"></i> Категорія:
+            </label>
+            <select id="category" name="category">
+                <option value="developer">Розробник</option>
+                <option value="designer">Дизайнер</option>
+                <option value="manager">Менеджер</option>
+                <option value="marketing">Маркетинг</option>
+                <option value="sales">Продажі</option>
+                <option value="support">Підтримка</option>
+                <option value="finance">Фінанси</option>
+                <option value="hr">HR</option>
+            </select>
+        </div>
+
+        <!-- Регіон -->
+        <div class="form-group">
+            <label for="city">
+                <i class="fas fa-map-marker-alt"></i> Регіон:
+            </label>
+            <select id="city" name="city">
+                <option value="Київ">Київ</option>
+                <option value="Львві">Львів</option>
+                <option value="Одеса">Одеса</option>
+                <option value="Харків">Харків</option>
+                <option value="Дніпро">Дніпро</option>
+                <option value="Вінниця">Вінниця</option>
+                <option value="Чернівці">Чернівці</option>
+                <option value="Ужгород">Ужгород</option>
+            </select>
+        </div>
+
+        <!-- Мінімальна зарплата -->
+        <div class="form-group">
+            <label for="salary">
+                <i class="fas fa-money-bill-wave"></i> Мінімальна зарплата:
+            </label>
+            <input type="number" id="salary" name="salary" placeholder="Введіть суму">
+        </div>
+
+        <!-- Кнопка пошуку -->
+        <button type="button" id="search-button">
+            <i class="fas fa-search"></i> Шукати
+        </button>
+    </form>
+</main>
+
+<div class="job-grid-search"></div> <!-- Контейнер для вакансій -->
+
+<footer>
+    <p>Контакти: vovafifa10@gmail.com | 050-990-10-76</p>
+</footer>
+<script src="search.js"></script>
+
+</body>
+</html>

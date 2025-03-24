@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вакансії</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+</head>
+<body>
+<header>
+    <h1>Вакансії</h1>
+</header>
+<nav>
+    <a href="index.html">Головне меню</a>
+    <a href="profile.html"><i class="fas fa-user"></i> Мій профіль</a>
+    <a href="search.html"><i class="fas fa-search"></i> Пошук роботи</a>
+    <button class="login-btn"><a href="login.html">Увійти</a></button>
+</nav>
+
+<main class="container">
+    <h2>Список відкритих вакансій</h2>
+    <div class="filters">
+        <label for="sort-filter">Сортувати за:</label>
+        <select id="sort-filter" onchange="sortJobs(this.value)">
+            <option value="salary">Зарплатою</option>
+            <option value="date">Датою публікації</option>
+        </select>
+
+        <div class="filter-icon" onclick="toggleFilter()">
+            <i class="fas fa-filter"></i> Фільтри
+        </div>
+
+        <div id="filter-container" class="filter-container">
+            <div class="filter-option">
+                <label for="salary-range">Зарплата:</label>
+                <input type="number" id="salary-min" placeholder="Від" min="0"> -
+                <input type="number" id="salary-max" placeholder="До" min="0">
+            </div>
+            <div class="filter-option">
+                <label for="city">Місто:</label>
+                <select id="city">
+                    <option value="all">Усі міста</option>
+                    <option value="Київ">Київ</option>
+                    <option value="Львві">Львів</option>
+                    <option value="Одеса">Одеса</option>
+                    <option value="Харків">Харків</option>
+                    <option value="Дніпро">Дніпро</option>
+                    <option value="Вінниця">Вінниця</option>
+                    <option value="Чернівці">Чернівці</option>
+                    <option value="Ужгород">Ужгород</option>
+                </select>
+            </div>
+
+            <div class="filter-option">
+                <label for="company">Компанія:</label>
+                <select id="company">
+                    <option value="all">Усі компанії</option>
+                    <option value="SoftServe">SoftServe</option>
+                    <option value="Luxoft">Luxoft</option>
+                    <option value="Miratech">Miratech</option>
+                    <option value="DataArt">DataArt</option>
+                    <option value="Intellias">Intellias</option>
+                </select>
+            </div>
+
+            <div class="filter-option">
+                <label for="industry">Сфера діяльності:</label>
+                <select id="industry">
+                    <option value="all">Усі сфери</option>
+                    <option value="developer">Розробник</option>
+                    <option value="designer">Дизайнер</option>
+                    <option value="manager">Менеджер</option>
+                    <option value="marketing">Маркетинг</option>
+                    <option value="sales">Продажі</option>
+                    <option value="support">Підтримка</option>
+                    <option value="finance">Фінанси</option>
+                    <option value="hr">HR</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <p>Знайдено <span id="job-count">0</span> вакансій</p>
+
+    <section class="job-grid">
+        <!-- Вакансії будуть згенеровані тут через vacancies.js -->
+    </section>
+    <script src="vacancies.js"></script> <!-- Підключення JavaScript -->
+
+</main>
+<footer>
+    <p>Контакти: vovafifa10@gmail.com | 050-990-10-76</p>
+</footer>
+</body>
+</html>
